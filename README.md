@@ -17,10 +17,16 @@ This project involves the implementation of a REST API using Python for the cour
 
 - <b>Windows 11</b> 
 
-<h2>Program walk-through:</h2>
+<h2>Backend Creation / Testing:</h2>
 
 <p align="center">
-Launch the utility: <br/>
+Creating Database through Docker: <br/>
 <img src="https://i.imgur.com/IBrBowD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+</p>
+
+<p align="center">
+Various CRUD commands: <br/>
+<img src="https://i.imgur.com/WIors1z.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 </p>
