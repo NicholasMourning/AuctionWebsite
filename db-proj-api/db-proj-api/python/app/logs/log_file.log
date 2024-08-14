@@ -1,0 +1,255 @@
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.23.0.3:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-069-690
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+ERROR:logger:GET /users - error: invalid literal for int() with base 10: 'ssmith'
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:19:20] "GET /users/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/app/demo-proj.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-069-690
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:19:48] "GET /users/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:20:17] "[32mGET /users/ssmith HTTP/1.1[0m" 308 -
+INFO:logger:GET /users/<username>
+DEBUG:logger:username: {username}
+DEBUG:logger:GET /users/<username> - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+ERROR:logger:GET /users/<username> - error: invalid literal for int() with base 10: 'ssmith'
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:20:17] "GET /users/ssmith/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/app/demo-proj.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-069-690
+INFO:logger:GET /users/<username>
+DEBUG:logger:username: {username}
+DEBUG:logger:GET /users/<username> - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:20:26] "GET /users/ssmith/ HTTP/1.1" 200 -
+INFO:logger:POST /users
+DEBUG:logger:POST /users - payload: {'city': 'London', 'username': 'ppopov', 'name': 'Peter Popov'}
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:20:39] "POST /users/ HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+DEBUG:logger:('ppopov', 'London', 'Peter Popov')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:20:45] "GET /users/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:21:30] "[31m[1mPUT /users/ HTTP/1.1[0m" 405 -
+INFO:werkzeug: * Detected change in '/app/demo-proj.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-069-690
+INFO:logger:PUT /users/<username>
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:21:56] "[31m[1mPUT /users/ssmith HTTP/1.1[0m" 400 -
+INFO:logger:PUT /users/<username>
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:22:15] "[31m[1mPUT /users/ssmith HTTP/1.1[0m" 400 -
+INFO:logger:PUT /users/<username>
+DEBUG:logger:PUT /users/<username> - payload: {'username': 'scottsmith', 'city': 'Raleigh'}
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:22:56] "PUT /users/ssmith HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+DEBUG:logger:('ppopov', 'London', 'Peter Popov')
+DEBUG:logger:('ssmith', 'Scott Smith', 'Raleigh')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:23:00] "GET /users/ HTTP/1.1" 200 -
+INFO:logger:PUT /users/<username>
+DEBUG:logger:PUT /users/<username> - payload: {'city': 'Raleigh'}
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:23:33] "PUT /users/ssmith HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+DEBUG:logger:('ppopov', 'London', 'Peter Popov')
+DEBUG:logger:('ssmith', 'Scott Smith', 'Raleigh')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:23:42] "GET /users/ HTTP/1.1" 200 -
+INFO:logger:PUT /users/<username>
+DEBUG:logger:PUT /users/<username> - payload: {'city': 'Raleigh1'}
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:23:50] "PUT /users/ssmith HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+DEBUG:logger:('ppopov', 'London', 'Peter Popov')
+DEBUG:logger:('ssmith', 'Scott Smith', 'Raleigh1')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:23:52] "GET /users/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/app/demo-proj.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-069-690
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.26.0.3:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 297-826-753
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:50:27] "GET /users/ HTTP/1.1" 200 -
+INFO:logger:GET /users/<username>
+DEBUG:logger:username: {username}
+DEBUG:logger:GET /users/<username> - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:50:29] "GET /users/ssmith/ HTTP/1.1" 200 -
+INFO:logger:GET /users/<username>
+DEBUG:logger:username: {username}
+DEBUG:logger:GET /users/<username> - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:50:30] "GET /users/ssmith/ HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:54:50] "GET /users/ HTTP/1.1" 200 -
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:54:55] "[32mGET /users/ssmith HTTP/1.1[0m" 308 -
+INFO:logger:GET /users/<username>
+DEBUG:logger:username: {username}
+DEBUG:logger:GET /users/<username> - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:54:55] "GET /users/ssmith/ HTTP/1.1" 200 -
+INFO:logger:POST /users
+DEBUG:logger:POST /users - payload: {'username': 'ppopov', 'city': 'London', 'name': 'Peter Popov'}
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:54:58] "POST /users/ HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+DEBUG:logger:('ppopov', 'London', 'Peter Popov')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:55:02] "GET /users/ HTTP/1.1" 200 -
+INFO:logger:PUT /users/<username>
+DEBUG:logger:PUT /users/<username> - payload: {'city': 'Raleigh'}
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:55:41] "PUT /users/69 HTTP/1.1" 200 -
+INFO:logger:PUT /users/<username>
+DEBUG:logger:PUT /users/<username> - payload: {'city': 'Raleigh'}
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:56:35] "PUT /users/ssmith HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+DEBUG:logger:('ppopov', 'London', 'Peter Popov')
+DEBUG:logger:('ssmith', 'Scott Smith', 'Raleigh')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 01:56:40] "GET /users/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/app/demo-proj.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 297-826-753
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.27.0.3:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:logger:
+---------------------------------------------------------------
+API v1.1 online: http://localhost:8080/users/
+
+
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 914-062-211
+INFO:logger:GET /users/<username>
+DEBUG:logger:username: {username}
+DEBUG:logger:GET /users/<username> - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 02:00:48] "GET /users/ssmith/ HTTP/1.1" 200 -
+INFO:logger:GET /users/<username>
+DEBUG:logger:username: {username}
+DEBUG:logger:GET /users/<username> - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 02:00:51] "GET /users/ssmith/ HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 02:00:51] "GET /users/ HTTP/1.1" 200 -
+INFO:logger:POST /users
+DEBUG:logger:POST /users - payload: {'city': 'London', 'username': 'ppopov', 'name': 'Peter Popov'}
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 02:01:03] "POST /users/ HTTP/1.1" 200 -
+INFO:logger:GET /users
+DEBUG:logger:GET /users - parse
+DEBUG:logger:('ssmith', 'Scott Smith', 'New York')
+DEBUG:logger:('aking', 'Allen King', 'Dallas')
+DEBUG:logger:('jford', 'Jones Ford', 'Chicago')
+DEBUG:logger:('mmiller', 'Martin Miller', 'Boston')
+DEBUG:logger:('ppopov', 'London', 'Peter Popov')
+INFO:werkzeug:192.168.65.1 - - [19/Mar/2024 02:01:06] "GET /users/ HTTP/1.1" 200 -
