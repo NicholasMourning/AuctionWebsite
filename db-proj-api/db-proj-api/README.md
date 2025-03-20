@@ -1,4 +1,4 @@
-Database-Centric REST API Setup Guide
+<h1>Database-Centric REST API Setup Guide</h1>
 This repository provides examples for the initial setup of a database-centric REST API required for your course project. The examples are fully automated for easy deployment in third-party environments using either Docker or Maven (depending on your chosen project).
 
 Note: This guide does not replace the official assignment description. Please review the assignment for complete details.
