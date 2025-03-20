@@ -1,7 +1,7 @@
 <h1>Auction Website</h1>
 
 <h2>Description</h2>
-This project involves the implementation of a REST API using Python for the course ITCS 3160-0002 at the University of North Carolina at Charlotte, under the guidance of Marco Vieira. The API is designed to handle basic CRUD (Create, Read, Update, Delete) operations on a user database. It provides various endpoints for managing user data, including retrieving all users, retrieving a specific user, adding a new user, and updating an existing user's information.
+This project involves the implementation of a REST API using Javafor the course ITCS 3160-0002 at the University of North Carolina at Charlotte, under the guidance of Marco Vieira. The API is designed to handle basic CRUD (Create, Read, Update, Delete) operations on a user database. It provides various endpoints for managing user data, including retrieving all users, retrieving a specific user, adding a new user, and updating an existing user's information.
 <br />
 
 
