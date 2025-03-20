@@ -1,10 +1,3 @@
-## ITCS 3160-0002, Spring 2024
-## Marco Vieira, marco.vieira@charlotte.edu
-## University of North Carolina at Charlotte
-
-The code and resources provided are to be used only in the scope of ITCS 3160-0002, Spring 2024.
-
-
 ## Requirements
 
 - To execute this project it is required to have installed:
@@ -45,4 +38,3 @@ To stop the container:
 ```sh
 sh stop.sh
 ```
-

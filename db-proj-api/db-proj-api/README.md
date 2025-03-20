@@ -1,55 +1,38 @@
-## ITCS 3160-0002, Spring 2024
-## Marco Vieira, marco.vieira@charlotte.edu
-## University of North Carolina at Charlotte
+Database-Centric REST API Setup Guide
+This repository provides examples for the initial setup of a database-centric REST API required for your course project. The examples are fully automated for easy deployment in third-party environments using either Docker or Maven (depending on your chosen project).
 
-The code and resources provided are to be used only in the scope of ITCS 3160-0002, Spring 2024.
- 
-The main purpose is to provide examples on how to do the the initial setup of the database-centric REST API that must be developed for the course project.
-In particular, the projects available are totally automated to be easily deployed in third-party setups with the help of a tool (in this case `docker` or maven, depending on the project). 
+Note: This guide does not replace the official assignment description. Please review the assignment for complete details.
 
-_This content does not replace the proper reading of the assignment description._
+Overview of the Contents
+PostgreSQL:
+A ready-to-run PostgreSQL database in a Docker container (with or without Docker Compose).
 
+The app/ directory is mounted for live development.
+Java:
+A Java/Spark web application template with Docker container configuration. It can be run using Docker Compose with PostgreSQL or in your favorite IDE.
 
-## Overview of the Contents
+Postman:
+A collection of Postman requests exported to help test the API.
 
-- [**`PostgreSQL`**](postgresql) - Database ready to run in a `docker` container with or without the help of the `docker-compose` tool;
-- [**`Python`**](python) - Source code of web application template in python for execution  with `docker` container configured. Ready to run in `docker-compose` with PostgreSQL
-  - [`app/`](python/app) folder is mounted to allow developing with container running
-- [**`Java`**](java) - Source code of web application template in java/spark with `docker` container configured. Ready to run in `docker-compose` with PostgreSQL or in your favorite IDE.
-- [**`postman`**](postman) - A collection of requests exported of postman tool;
+Requirements
+Before running the project, ensure that you have the following installed:
 
+Docker
+Docker Compose
+Maven (required only for the Java option)
+Demo: Python REST API
+To start the Python demo, run the following script:
 
-## Requirements
+sh docker-compose-python-psql.sh
 
-To execute this project it is required to have installed:
+This script uses Docker Compose and the configuration defined in docker-compose-python-psql.yml to launch both the server and the PostgreSQL database. The app directory is mounted into the container, so any changes you make are reflected immediately without the need to rebuild or restart.
 
-- `docker`
-- `docker-compose`
-- `maven` only if you opt for the [java](java) option
+Access the API: http://localhost:8080
+Demo: Java REST API
+To run the Java demo, execute the following script:
 
+sh docker-compose-java-psql.sh
 
+This demo uses Spring Boot, a widely adopted framework for building REST APIs and microservices. Spring Boot makes it simple to create stand-alone, production-grade applications that “just run.” Deployment is easily automated with Maven or Docker.
 
-## Demo [Python](python) REST API
-
-
-To start this demo with run the script (e.g. [`sh docker-compose-python-psql.sh`](docker-compose-python-psql.sh)) to have both the server and the database running.
-This script uses `docker-compose` and follows the configurations available in [`docker-compose-python-psql.yml`](docker-compose-python-psql.yml)).
-
-The folder [`app`](python/app) is mapped into the container.
-You can modify the contents and the server will update the sources without requiring to rebuild or restart the container.
-
-* Web browser access: http://localhost:8080
-
-
-
-## Demo [Java](java) REST API
-
-To start this demo with run the script (e.g. [`sh docker-compose-java-psql.sh`](docker-compose-java-psql.sh)) to have both the server and the database running.
-
-The demo available here uses [Spring Boot](https://spring.io/projects/spring-boot), which is one of the most widely used solutions to develop REST APIs and micro-services.
-*"Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run."*
-It is very easy to build and automate its deployment either with `maven` or `Docker`.
-
-* Web browser access: http://localhost:8080
-
-
+Access the API: http://localhost:8080

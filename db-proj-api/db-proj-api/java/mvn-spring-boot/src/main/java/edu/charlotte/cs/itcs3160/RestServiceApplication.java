@@ -1,8 +1,3 @@
-/** **
-* ITCS 3160-0002, Spring 2024
-* Marco Vieira, marco.vieira@charlotte.edu
-* University of North Carolina at Charlotte
- */
 package edu.charlotte.cs.itcs3160;
 
 import java.sql.Connection;
